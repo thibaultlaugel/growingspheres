@@ -5,15 +5,6 @@ from sklearn.utils import check_random_state
 from .utils.gs_utils import get_distances
 from . import growingspheres
 
-class Explanation:
-    def __init__(self, obs_to_interprete, n_counterfactuals, restart=False):
-        """
-        obs_to_interprete ok
-        n_counterfatucals nb of counterfactuals to return
-        restart: if n_counterfactuals > 1, does it start from 0 to look for another one
-        """
-        #self.obs_to_interprete
-        return 1
 
 class CounterfactualExplanation:
     """

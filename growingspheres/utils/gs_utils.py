@@ -5,15 +5,6 @@ import numpy as np
 from scipy.stats import kendalltau
 from sklearn.metrics.pairwise import pairwise_distances
 
-def generate_inside_ball_old(center, segment=(0,1), n=1): #verifier algo bien uniforme....
-        def norm(v):
-            return np.linalg.norm(v, ord=2, axis=1)
-        #attention: check si 
-        d = center.shape[0]
-        z = np.random.normal(0, 1, (n, d))
-        z = np.array([a * b / c for a, b, c in zip(z, np.random.uniform(*segment, n),  norm(z))])
-        z = z + center
-        return z # les z sont a distance de center comprise dans le segment
     
 def get_distances(x1, x2, metrics=None):
     x1, x2 = x1.reshape(1, -1), x2.reshape(1, -1)
