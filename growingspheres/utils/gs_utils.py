@@ -23,7 +23,7 @@ def get_distances(x1, x2, metrics=None):
 def generate_inside_ball(center, segment, n):
     def norm(v):
         return np.linalg.norm(v, ord=2, axis=1)
-    d = center.shape[0]
+    d = center.shape[1]
     z = np.random.normal(0, 1, (n, d))
     u = np.random.uniform(segment[0]**d, segment[1]**d, n)
     r = u**(1/float(d))
