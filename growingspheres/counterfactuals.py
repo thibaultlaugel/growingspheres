@@ -28,7 +28,7 @@ class CounterfactualExplanation:
                         }
         self.fitted = 0
         
-    def fit(self, caps=None, n_in_layer=2000, first_radius=0.1, dicrease_radius=10, sparse=True, verbose=False):
+    def fit(self, caps=None, n_in_layer=2000, layer_shape='ball', first_radius=0.1, dicrease_radius=10, sparse=True, verbose=False):
         """
         find the counterfactual with the specified method
         """
@@ -37,6 +37,7 @@ class CounterfactualExplanation:
                 self.target_class,
                 caps,
                 n_in_layer,
+                layer_shape,
                 first_radius,
                 dicrease_radius,
                 sparse,
